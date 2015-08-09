@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHl-qK-UwD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8089"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="235" y="347"/>
-        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="ShooPa_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
@@ -44,9 +37,55 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="ShooPa_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="3Gd-Uj-YsX">
+            <objects>
+                <controller hidesWhenLoading="NO" id="QHl-qK-UwD" customClass="InterfaceController" customModule="ShooPa_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="VIg-t5-qUl">
+                            <items>
+                                <label width="135.5" height="30.5" alignment="left" text="Label" id="eDH-un-OMa"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="testLabel" destination="eDH-un-OMa" id="ihW-AG-VZN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="173" y="364"/>
+        </scene>
+        <!--Audio Recording Interface Controller-->
+        <scene sceneID="2zU-89-KYh">
+            <objects>
+                <controller id="sZY-9l-0Xi" customClass="AAPLAudioRecordingInterfaceController">
+                    <items>
+                        <picker width="1" height="100" alignment="left" id="0xL-cb-y62">
+                            <connections>
+                                <action selector="pickerValueSelected:" destination="sZY-9l-0Xi" id="Cbh-mq-efe"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Start Recording" id="RpO-dh-6Rp">
+                            <connections>
+                                <action selector="startRecording" destination="sZY-9l-0Xi" id="ffu-0d-l0Q"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Play" id="xWA-Bd-TSg">
+                            <connections>
+                                <action selector="playLastRecording" destination="sZY-9l-0Xi" id="i8a-9d-XQS"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="picker" destination="0xL-cb-y62" id="y0I-cH-ghp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="415" y="363.5"/>
         </scene>
     </scenes>
 </document>

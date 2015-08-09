@@ -24,6 +24,12 @@
 		2508E9911B4A83F300149E49 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508E9901B4A83F300149E49 /* GlanceController.swift */; };
 		2508E9931B4A83F300149E49 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508E9921B4A83F300149E49 /* ComplicationController.swift */; };
 		2508E9951B4A83F300149E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2508E9941B4A83F300149E49 /* Assets.xcassets */; };
+		25531E6E1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25531E6B1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.m */; };
+		25531E731B64D36F00995B1E /* AAPLAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 25531E721B64D36F00995B1E /* AAPLAppConfiguration.m */; };
+		25531E741B64D36F00995B1E /* AAPLAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 25531E721B64D36F00995B1E /* AAPLAppConfiguration.m */; };
+		2593C9D01B77768F00405A52 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2593C9CF1B77768F00405A52 /* sound.mp3 */; };
+		2593C9D21B777C6E00405A52 /* fart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2593C9D11B777C6E00405A52 /* fart.wav */; };
+		2593C9D41B778E8600405A52 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2593C9D31B778E8600405A52 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +115,17 @@
 		2508E9921B4A83F300149E49 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		2508E9941B4A83F300149E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2508E9961B4A83F300149E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25531E691B64D2F200995B1E /* ShooPa WatchKit Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShooPa WatchKit Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		25531E6A1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAudioRecordingInterfaceController.h; sourceTree = "<group>"; };
+		25531E6B1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLAudioRecordingInterfaceController.m; sourceTree = "<group>"; };
+		25531E711B64D36F00995B1E /* AAPLAppConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAppConfiguration.h; sourceTree = "<group>"; };
+		25531E721B64D36F00995B1E /* AAPLAppConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLAppConfiguration.m; sourceTree = "<group>"; };
+		25531E751B65106F00995B1E /* ShooPa WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShooPa WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		2559B9291B67D49C00910FFF /* ShooPa WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShooPa WatchKit App.entitlements"; sourceTree = "<group>"; };
+		2593C9CF1B77768F00405A52 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		2593C9D11B777C6E00405A52 /* fart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fart.wav; sourceTree = "<group>"; };
+		2593C9D31B778E8600405A52 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		25C4534D1B77314300F1C35C /* ShooPa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ShooPa.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2593C9D41B778E8600405A52 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,11 +164,13 @@
 		2508E9431B4A83F300149E49 = {
 			isa = PBXGroup;
 			children = (
+				2593C9D31B778E8600405A52 /* CoreMotion.framework */,
 				2508E94E1B4A83F300149E49 /* ShooPa */,
 				2508E9631B4A83F300149E49 /* ShooPaTests */,
 				2508E96E1B4A83F300149E49 /* ShooPaUITests */,
 				2508E9781B4A83F300149E49 /* ShooPa WatchKit App */,
 				2508E9871B4A83F300149E49 /* ShooPa WatchKit Extension */,
+				25531E701B64D36F00995B1E /* Configuration */,
 				2508E94D1B4A83F300149E49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -170,6 +190,7 @@
 		2508E94E1B4A83F300149E49 /* ShooPa */ = {
 			isa = PBXGroup;
 			children = (
+				25C4534D1B77314300F1C35C /* ShooPa.entitlements */,
 				2508E94F1B4A83F300149E49 /* AppDelegate.swift */,
 				2508E9511B4A83F300149E49 /* ViewController.swift */,
 				2508E9531B4A83F300149E49 /* Main.storyboard */,
@@ -201,6 +222,7 @@
 		2508E9781B4A83F300149E49 /* ShooPa WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				2559B9291B67D49C00910FFF /* ShooPa WatchKit App.entitlements */,
 				2508E9791B4A83F300149E49 /* Interface.storyboard */,
 				2508E97C1B4A83F300149E49 /* Assets.xcassets */,
 				2508E97E1B4A83F300149E49 /* Info.plist */,
@@ -211,6 +233,11 @@
 		2508E9871B4A83F300149E49 /* ShooPa WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2593C9D11B777C6E00405A52 /* fart.wav */,
+				2593C9CF1B77768F00405A52 /* sound.mp3 */,
+				25531E751B65106F00995B1E /* ShooPa WatchKit Extension.entitlements */,
+				25531E6A1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.h */,
+				25531E6B1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.m */,
 				2508E98A1B4A83F300149E49 /* InterfaceController.swift */,
 				2508E98C1B4A83F300149E49 /* ExtensionDelegate.swift */,
 				2508E98E1B4A83F300149E49 /* NotificationController.swift */,
@@ -219,6 +246,7 @@
 				2508E9941B4A83F300149E49 /* Assets.xcassets */,
 				2508E9961B4A83F300149E49 /* Info.plist */,
 				2508E9881B4A83F300149E49 /* Supporting Files */,
+				25531E691B64D2F200995B1E /* ShooPa WatchKit Extension-Bridging-Header.h */,
 			);
 			path = "ShooPa WatchKit Extension";
 			sourceTree = "<group>";
@@ -229,6 +257,15 @@
 				2508E9891B4A83F300149E49 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25531E701B64D36F00995B1E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				25531E711B64D36F00995B1E /* AAPLAppConfiguration.h */,
+				25531E721B64D36F00995B1E /* AAPLAppConfiguration.m */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,11 +366,18 @@
 		2508E9441B4A83F300149E49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = last4;
 				TargetAttributes = {
 					2508E94B1B4A83F300149E49 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 2MGFD5R2T3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2508E95F1B4A83F300149E49 = {
 						CreatedOnToolsVersion = 7.0;
@@ -345,9 +389,21 @@
 					};
 					2508E9731B4A83F300149E49 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 2MGFD5R2T3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2508E9821B4A83F300149E49 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 2MGFD5R2T3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -411,6 +467,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2593C9D21B777C6E00405A52 /* fart.wav in Resources */,
+				2593C9D01B77768F00405A52 /* sound.mp3 in Resources */,
 				2508E9951B4A83F300149E49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +482,7 @@
 			files = (
 				2508E9521B4A83F300149E49 /* ViewController.swift in Sources */,
 				2508E9501B4A83F300149E49 /* AppDelegate.swift in Sources */,
+				25531E731B64D36F00995B1E /* AAPLAppConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,10 +506,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25531E741B64D36F00995B1E /* AAPLAppConfiguration.m in Sources */,
 				2508E98F1B4A83F300149E49 /* NotificationController.swift in Sources */,
 				2508E98D1B4A83F300149E49 /* ExtensionDelegate.swift in Sources */,
 				2508E9931B4A83F300149E49 /* ComplicationController.swift in Sources */,
 				2508E98B1B4A83F300149E49 /* InterfaceController.swift in Sources */,
+				25531E6E1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.m in Sources */,
 				2508E9911B4A83F300149E49 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,13 +656,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ShooPa WatchKit Extension/ShooPa WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ShooPa WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShooPa WatchKit Extension/ShooPa WatchKit Extension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -611,13 +678,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ShooPa WatchKit Extension/ShooPa WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ShooPa WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShooPa WatchKit Extension/ShooPa WatchKit Extension-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -627,12 +699,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ShooPa WatchKit App/ShooPa WatchKit App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = ShooPa_WatchKit_Extension;
 				INFOPLIST_FILE = "ShooPa WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -644,12 +719,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ShooPa WatchKit App/ShooPa WatchKit App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = ShooPa_WatchKit_Extension;
 				INFOPLIST_FILE = "ShooPa WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -661,10 +739,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShooPa/ShooPa.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = ShooPa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f371960-93c1-41b6-b9d6-658539c2ecfa";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -672,10 +755,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShooPa/ShooPa.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = ShooPa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f371960-93c1-41b6-b9d6-658539c2ecfa";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -746,6 +834,7 @@
 				2508E99B1B4A83F300149E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2508E99D1B4A83F300149E49 /* Build configuration list for PBXNativeTarget "ShooPa WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +843,7 @@
 				2508E99F1B4A83F300149E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2508E9A11B4A83F300149E49 /* Build configuration list for PBXNativeTarget "ShooPa" */ = {
 			isa = XCConfigurationList;
@@ -762,6 +852,7 @@
 				2508E9A31B4A83F300149E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2508E9A41B4A83F300149E49 /* Build configuration list for PBXNativeTarget "ShooPaTests" */ = {
 			isa = XCConfigurationList;
@@ -770,6 +861,7 @@
 				2508E9A61B4A83F300149E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2508E9A71B4A83F300149E49 /* Build configuration list for PBXNativeTarget "ShooPaUITests" */ = {
 			isa = XCConfigurationList;
@@ -778,6 +870,7 @@
 				2508E9A91B4A83F300149E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
