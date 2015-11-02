@@ -9,12 +9,15 @@
 import WatchKit
 import Foundation
 import CoreMotion
+import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
     let motionMgr:CMMotionManager = CMMotionManager()
     let motionQueue:NSOperationQueue = NSOperationQueue.mainQueue()
     let assetURL = NSBundle.mainBundle().URLForResource("fart", withExtension: "wav")
+    var audioFilePlayer:WKAudioFilePlayer!
+    var session:WCSession!
     
     @IBOutlet var testLabel: WKInterfaceLabel!
     
@@ -27,6 +30,9 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        self.initAudioFilePlayer(assetURL!)
+        let session = WCSession.defaultSession()
+        session.activateSession()
     }
 
     override func didDeactivate() {
@@ -35,14 +41,17 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func onClickPlayBtn() {
-        self.playSoundByMediaPlayerController(assetURL!)
+        self.playSoundByAudioFilePlayer(assetURL!)
+    }
+
+    func initAudioFilePlayer(assetURL: NSURL) {
+        let asset = WKAudioFileAsset(URL: assetURL)
+        let playerItem = WKAudioFilePlayerItem(asset: asset)
+        audioFilePlayer = WKAudioFilePlayer(playerItem: playerItem)
     }
     
     func playSoundByAudioFilePlayer(assetURL: NSURL) {
-        let asset = WKAudioFileAsset(URL: assetURL)
-        let playerItem = WKAudioFilePlayerItem(asset: asset)
-        let audioFilePlayer = WKAudioFilePlayer(playerItem: playerItem)
-            
+        print("Play\n")
         if (audioFilePlayer.status == WKAudioFilePlayerStatus.ReadyToPlay) {
             audioFilePlayer.play()
         }
@@ -66,10 +75,31 @@ class InterfaceController: WKInterfaceController {
         motionMgr.accelerometerUpdateInterval = 0.1
         motionMgr.startAccelerometerUpdatesToQueue(motionQueue) { (accel: CMAccelerometerData?, err: NSError?) -> Void in
             let acceleration:CMAcceleration = accel!.acceleration
-//            self.testLabel.setText("X:\(acceleration.x) Y:\(acceleration.y) Z:\(acceleration.z)")
+            let dataToSend = "X:\(acceleration.x) Y:\(acceleration.y) Z:\(acceleration.z)\n"
+//            print(dataToSend)
             if abs(acceleration.x) > 1 || abs(acceleration.y) > 1 || abs(acceleration.z) > 1 {
-                self.playSoundByMediaPlayerController(self.assetURL!)
+//                self.playSoundByMediaPlayerController(self.assetURL!)
+//                self.playSoundByAudioFilePlayer(self.assetURL!)
+                self.communicateWithTheMainApp(dataToSend)
             }
+        }
+    }
+    
+    func communicateWithTheMainApp(dataToSend: String) {
+        if WCSession.isSupported() {
+            let session = WCSession.defaultSession()
+//            session.activateSession()
+//            if (session.reachable) {
+                testLabel.setText("Reachable")
+                let applicationDict = ["key":"value"]// Create a dict of application data
+                session.sendMessage(applicationDict, replyHandler: { (replay: [String : AnyObject]) -> Void in
+                    //
+                    }, errorHandler: { (err: NSError) -> Void in
+                        print(err.description)
+                })
+//            }else{
+//                testLabel.setText("Unreachable")
+//            }
         }
     }
 }

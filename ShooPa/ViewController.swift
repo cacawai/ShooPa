@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WCSessionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if WCSession.isSupported() {
+            let session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +27,9 @@ class ViewController: UIViewController {
     }
 
 
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject])
+    {
+        NSLog("didReceiveMessage")
+    }
 }
 
