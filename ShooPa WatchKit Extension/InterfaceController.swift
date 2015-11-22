@@ -23,6 +23,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        if (WCSession.isSupported()) {
+            let session = WCSession.defaultSession()
+            session.delegate = self // conforms to WCSessionDelegate
+            session.activateSession()
+        }
         coreMotionAcceleroMeterTest()
         // Configure interface objects here.
     }
@@ -80,26 +85,24 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             if abs(acceleration.x) > 1 || abs(acceleration.y) > 1 || abs(acceleration.z) > 1 {
 //                self.playSoundByMediaPlayerController(self.assetURL!)
 //                self.playSoundByAudioFilePlayer(self.assetURL!)
-                self.communicateWithTheMainApp(dataToSend)
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.communicateWithTheMainApp(dataToSend)
+                })
             }
         }
     }
     
     func communicateWithTheMainApp(dataToSend: String) {
-        if WCSession.isSupported() {
-            let session = WCSession.defaultSession()
-//            session.activateSession()
-//            if (session.reachable) {
-                testLabel.setText("Reachable")
-                let applicationDict = ["key":"value"]// Create a dict of application data
-                session.sendMessage(applicationDict, replyHandler: { (replay: [String : AnyObject]) -> Void in
-                    //
-                    }, errorHandler: { (err: NSError) -> Void in
-                        print(err.description)
-                })
-//            }else{
-//                testLabel.setText("Unreachable")
-//            }
+        if (WCSession.defaultSession().reachable) {
+            testLabel.setText("Reachable")
+            let applicationDict = ["key":"value"]// Create a dict of application data
+            WCSession.defaultSession().sendMessage(applicationDict, replyHandler: { (reply: [String : AnyObject]) -> Void in
+                //
+                }, errorHandler: { (err: NSError) -> Void in
+                    print(err.description)
+            })
+        }else{
+            testLabel.setText("Unreachable")
         }
     }
 }

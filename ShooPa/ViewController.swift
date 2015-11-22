@@ -11,13 +11,13 @@ import WatchConnectivity
 
 class ViewController: UIViewController, WCSessionDelegate {
 
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if WCSession.isSupported() {
             let session = WCSession.defaultSession()
             session.delegate = self
-            session.activateSession()
         }
     }
 
@@ -27,9 +27,20 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
 
 
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject])
-    {
-        NSLog("didReceiveMessage")
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        print(__FUNCTION__)
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            guard message["key"] as? String == "value" else {return}
+            self.label.text = "OK"
+            let localNotification = UILocalNotification()
+            localNotification.alertBody = "Message Received!"
+//            localNotification.fireDate = NSDate()
+            localNotification.soundName = UILocalNotificationDefaultSoundName;
+            
+            UIApplication.sharedApplication().presentLocalNotificationNow(localNotification)
+        }
+
     }
 }
 

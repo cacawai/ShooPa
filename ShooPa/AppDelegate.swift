@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,WCSessionDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        if WCSession.isSupported() {
+            WCSession.defaultSession().delegate = self
+            WCSession.defaultSession().activateSession()
+        }
         return true
     }
 
@@ -41,6 +46,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    func sessionWatchStateDidChange(session: WCSession) {
+        
+    }
+    
+    /** ------------------------- Interactive Messaging ------------------------- */
+     
+     /** Called when the reachable state of the counterpart app changes. The receiver should check the reachable property on receiving this delegate callback. */
+    @available(iOS 9.0, *)
+    func sessionReachabilityDidChange(session: WCSession) {
+        
+    }
+    
+    /** Called on the delegate of the receiver. Will be called on startup if the incoming message caused the receiver to launch. */
+    @available(iOS 9.0, *)
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        
+    }
 
 }
 
