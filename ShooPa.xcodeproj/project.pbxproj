@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		2508E9501B4A83F300149E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508E94F1B4A83F300149E49 /* AppDelegate.swift */; };
 		2508E9521B4A83F300149E49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508E9511B4A83F300149E49 /* ViewController.swift */; };
-		2508E9551B4A83F300149E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2508E9531B4A83F300149E49 /* Main.storyboard */; };
-		2508E9571B4A83F300149E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2508E9561B4A83F300149E49 /* Assets.xcassets */; };
-		2508E95A1B4A83F300149E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2508E9581B4A83F300149E49 /* LaunchScreen.storyboard */; };
 		2508E9651B4A83F300149E49 /* ShooPaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508E9641B4A83F300149E49 /* ShooPaTests.swift */; };
 		2508E9701B4A83F300149E49 /* ShooPaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508E96F1B4A83F300149E49 /* ShooPaUITests.swift */; };
 		2508E9751B4A83F300149E49 /* ShooPa WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2508E9741B4A83F300149E49 /* ShooPa WatchKit App.app */; };
@@ -27,6 +24,11 @@
 		25531E6E1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25531E6B1B64D2F300995B1E /* AAPLAudioRecordingInterfaceController.m */; };
 		25531E731B64D36F00995B1E /* AAPLAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 25531E721B64D36F00995B1E /* AAPLAppConfiguration.m */; };
 		25531E741B64D36F00995B1E /* AAPLAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 25531E721B64D36F00995B1E /* AAPLAppConfiguration.m */; };
+		2575503D1C0AF8880039046C /* XYAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2575503C1C0AF8880039046C /* XYAudioPlayer.m */; };
+		257EAFAA1C0B031800E113AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257EAFA91C0B031800E113AF /* Assets.xcassets */; };
+		257EAFAF1C0B032300E113AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257EAFAB1C0B032300E113AF /* LaunchScreen.storyboard */; };
+		257EAFB01C0B032300E113AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257EAFAD1C0B032300E113AF /* Main.storyboard */; };
+		257EAFB21C0B033000E113AF /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 257EAFB11C0B033000E113AF /* sound */; };
 		2593C9D01B77768F00405A52 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2593C9CF1B77768F00405A52 /* sound.mp3 */; };
 		2593C9D21B777C6E00405A52 /* fart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2593C9D11B777C6E00405A52 /* fart.wav */; };
 		2593C9D41B778E8600405A52 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2593C9D31B778E8600405A52 /* CoreMotion.framework */; };
@@ -93,9 +95,6 @@
 		2508E94C1B4A83F300149E49 /* ShooPa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShooPa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2508E94F1B4A83F300149E49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2508E9511B4A83F300149E49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2508E9541B4A83F300149E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2508E9561B4A83F300149E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2508E9591B4A83F300149E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2508E95B1B4A83F300149E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2508E9601B4A83F300149E49 /* ShooPaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShooPaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2508E9641B4A83F300149E49 /* ShooPaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShooPaTests.swift; sourceTree = "<group>"; };
@@ -123,6 +122,13 @@
 		25531E721B64D36F00995B1E /* AAPLAppConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLAppConfiguration.m; sourceTree = "<group>"; };
 		25531E751B65106F00995B1E /* ShooPa WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShooPa WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		2559B9291B67D49C00910FFF /* ShooPa WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShooPa WatchKit App.entitlements"; sourceTree = "<group>"; };
+		2575503B1C0AF8880039046C /* XYAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAudioPlayer.h; sourceTree = "<group>"; };
+		2575503C1C0AF8880039046C /* XYAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAudioPlayer.m; sourceTree = "<group>"; };
+		257550491C0AFC290039046C /* Shoopa-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Shoopa-Bridging-Header.h"; sourceTree = "<group>"; };
+		257EAFA91C0B031800E113AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		257EAFAC1C0B032300E113AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		257EAFAE1C0B032300E113AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		257EAFB11C0B033000E113AF /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
 		2593C9CF1B77768F00405A52 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		2593C9D11B777C6E00405A52 /* fart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fart.wav; sourceTree = "<group>"; };
 		2593C9D31B778E8600405A52 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
@@ -194,13 +200,17 @@
 		2508E94E1B4A83F300149E49 /* ShooPa */ = {
 			isa = PBXGroup;
 			children = (
+				257EAFB11C0B033000E113AF /* sound */,
+				257EAFAB1C0B032300E113AF /* LaunchScreen.storyboard */,
+				257EAFAD1C0B032300E113AF /* Main.storyboard */,
+				257EAFA91C0B031800E113AF /* Assets.xcassets */,
+				2575503B1C0AF8880039046C /* XYAudioPlayer.h */,
+				2575503C1C0AF8880039046C /* XYAudioPlayer.m */,
 				25C4534D1B77314300F1C35C /* ShooPa.entitlements */,
 				2508E94F1B4A83F300149E49 /* AppDelegate.swift */,
 				2508E9511B4A83F300149E49 /* ViewController.swift */,
-				2508E9531B4A83F300149E49 /* Main.storyboard */,
-				2508E9561B4A83F300149E49 /* Assets.xcassets */,
-				2508E9581B4A83F300149E49 /* LaunchScreen.storyboard */,
 				2508E95B1B4A83F300149E49 /* Info.plist */,
+				257550491C0AFC290039046C /* Shoopa-Bridging-Header.h */,
 			);
 			path = ShooPa;
 			sourceTree = "<group>";
@@ -438,9 +448,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2508E95A1B4A83F300149E49 /* LaunchScreen.storyboard in Resources */,
-				2508E9571B4A83F300149E49 /* Assets.xcassets in Resources */,
-				2508E9551B4A83F300149E49 /* Main.storyboard in Resources */,
+				257EAFB01C0B032300E113AF /* Main.storyboard in Resources */,
+				257EAFAA1C0B031800E113AF /* Assets.xcassets in Resources */,
+				257EAFB21C0B033000E113AF /* sound in Resources */,
+				257EAFAF1C0B032300E113AF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +497,7 @@
 			files = (
 				2508E9521B4A83F300149E49 /* ViewController.swift in Sources */,
 				2508E9501B4A83F300149E49 /* AppDelegate.swift in Sources */,
+				2575503D1C0AF8880039046C /* XYAudioPlayer.m in Sources */,
 				25531E731B64D36F00995B1E /* AAPLAppConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,28 +558,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2508E9531B4A83F300149E49 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2508E9541B4A83F300149E49 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2508E9581B4A83F300149E49 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2508E9591B4A83F300149E49 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		2508E9791B4A83F300149E49 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2508E97A1B4A83F300149E49 /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		257EAFAB1C0B032300E113AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				257EAFAC1C0B032300E113AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		257EAFAD1C0B032300E113AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				257EAFAE1C0B032300E113AF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -751,6 +763,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4f371960-93c1-41b6-b9d6-658539c2ecfa";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Shoopa/Shoopa-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -767,6 +780,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.last4.ShooPa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4f371960-93c1-41b6-b9d6-658539c2ecfa";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Shoopa/Shoopa-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

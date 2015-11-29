@@ -9,6 +9,7 @@
 import UIKit
 import WatchConnectivity
 
+
 class ViewController: UIViewController, WCSessionDelegate {
 
     @IBOutlet weak var label: UILabel!
@@ -39,6 +40,14 @@ class ViewController: UIViewController, WCSessionDelegate {
             localNotification.soundName = UILocalNotificationDefaultSoundName;
             
             UIApplication.sharedApplication().presentLocalNotificationNow(localNotification)
+            
+            let url = NSBundle.mainBundle().URLForResource("ak47-1", withExtension: "wav", subdirectory: "sound/weapons")
+//            NSBundle.mainBundle().URLForResource("ak47-1", withExtension: "wav")
+            if XYAudioPlayer.sharedInstance().isPlaying() == false {
+                XYAudioPlayer.sharedInstance().play(url, playToTheEndBlock: { () -> Void in
+                    //
+                })
+            }
         }
 
     }
